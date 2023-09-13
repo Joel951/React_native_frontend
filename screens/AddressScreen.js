@@ -41,7 +41,7 @@ const AddressScreen = () => {
         console.log("Added New Address", address);
         console.log("Added New Address", houseNo);
 
-        axios.post("http://127.0.0.1:8000/addresses", { userId, address }).then((response) => {
+        axios.post("https://reactnative-be.onrender.com/addresses", { userId, address }).then((response) => {
             Alert.alert("Success", "Addresses added successfully");
             setName("");
             setMobileNo("");

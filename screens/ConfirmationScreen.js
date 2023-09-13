@@ -31,7 +31,7 @@ const ConfirmationScreen = () => {
 
     const fetchAddresses = async () => {
         try {
-            const response = await axios.get(`http://192.168.1.6:8000/addresses/${userId}`
+            const response = await axios.get(`https://reactnative-be.onrender.com/addresses/${userId}`
             );
             const { addresses } = response.data;
 
@@ -59,7 +59,7 @@ const ConfirmationScreen = () => {
 
             console.log("Order Data", orderData);
 
-            const response = await axios.post("http://192.168.1.6:8000/orders", orderData);
+            const response = await axios.post("https://reactnative-be.onrender.com/orders", orderData);
             if (response.status === 200) {
                 navigation.navigate("Order");
                 dispatch(cleanCart());
@@ -100,7 +100,7 @@ const ConfirmationScreen = () => {
             };
 
             const response = await axios.post(
-                "http://192.168.1.4:8000/orders",
+                "https://reactnative-be.onrender.com/orders",
                 orderData
             );
             if (response.status === 200) {

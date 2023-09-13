@@ -31,7 +31,7 @@ const RegisterScreen = () => {
         const user = { name: name, email: email, password: password };
 
         // send a post request to the backend API
-        axios.post("http://192.168.1.6:8000/register", user).then((response) => {
+        axios.post("https://reactnative-be.onrender.com/register", user).then((response) => {
             console.log(response);
             Alert.alert("Registeration successful", "You have registered successfully");
 

@@ -231,7 +231,7 @@ const HomeScreen = () => {
             }
         };
 
-        //fetchData();
+        fetchData();
     }, []);
 
     useEffect(() => {
@@ -256,7 +256,7 @@ const HomeScreen = () => {
 
     const fetchAddresses = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/addresses/${userId}`);
+            const response = await axios.get(`https://reactnative-be.onrender.com/addresses/${userId}`);
             const { addresses } = response.data;
 
             setAddresses(addresses);

@@ -27,7 +27,7 @@ const AddAddressScreen = () => {
     const fetchAddresses = async () => {
         try {
             const response = await axios.get(
-                `http://127.0.0.1:8000/addresses/${userId}`
+                `https://reactnative-be.onrender.com/addresses/${userId}`
             );
             const { addresses } = response.data;
 

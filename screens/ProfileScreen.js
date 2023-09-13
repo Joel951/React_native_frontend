@@ -88,7 +88,7 @@ const ProfileScreen = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get(`http://192.168.1.6:8000/orders/${userId}`);
+                const response = await axios.get(`https://reactnative-be.onrender.com/orders/${userId}`);
                 const orders = response.data.orders;
                 setOrders(orders);
 
